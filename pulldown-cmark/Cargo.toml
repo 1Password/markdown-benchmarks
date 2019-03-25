@@ -1,0 +1,8 @@
+[package]
+name = "pulldown-cmark"
+version = "0.1.0"
+authors = ["Roustem Karimov <roustem@agilebits.com>"]
+edition = "2018"
+
+[dependencies]
+pulldown-cmark = { version = "0.4", default-features = false }
