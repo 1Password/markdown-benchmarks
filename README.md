@@ -6,6 +6,7 @@ Testing performance of the popular markdown libraries:
 * [comrak](https://github.com/kivikakk/comrak)
 * [pulldown-cmark](https://github.com/raphlinus/pulldown-cmark)
 * [cmark](https://github.com/commonmark/cmark)
+* [md4c](https://github.com/mity/md4c)
 
 Running benchmarks:
 
