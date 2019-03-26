@@ -10,14 +10,20 @@ Testing performance of the popular markdown libraries:
 Running benchmarks:
 
 ```bash
-git clone git@github.com:1Password/markdown-benchmarks.git
-go get -u gopkg.in/russross/blackfriday.v2
-
 git clone git@github.com:commonmark/cmark.git
 mkdir -p cmark/build
 cd cmark/build
 cmake ..
 make
+cd ../..
+
+git clone git@github.com:hoedown/hoedown.git
+cd hoedown
+make
+cd ..
+
+git clone git@github.com:1Password/markdown-benchmarks.git
+go get -u gopkg.in/russross/blackfriday.v2
 
 cd markdown-benchmarks
 make build
@@ -28,27 +34,30 @@ Results on 2018 Mac Book Pro (2.9 GHz Intel Core i9)
 
 ```bash
 $ make run -s
-    Finished release [optimized] target(s) in 0.08s
-    Finished release [optimized] target(s) in 0.04s
 Blackfriday (Go):
-  1000 iterations = 0.057s
- 10000 iterations = 0.506s
-100000 iterations = 5.210s
+  1000 iterations = 0.054s
+ 10000 iterations = 0.517s
+100000 iterations = 5.149s
 
 Comrak (Rust):
-  1000 iterations =   0.259s
- 10000 iterations =   2.625s
-100000 iterations =  25.818s
+  1000 iterations =   0.258s
+ 10000 iterations =   2.560s
+100000 iterations =  25.890s
 
 Pulldown-cmark (Rust):
-  1000 iterations =   0.040s
- 10000 iterations =   0.397s
-100000 iterations =   3.740s
+  1000 iterations =   0.041s
+ 10000 iterations =   0.380s
+100000 iterations =   3.709s
 
-Cmark (C)
-  1000 iterations =   0.081s
- 10000 iterations =   0.808s
-100000 iterations =   7.946s
+Cmark (C):
+  1000 iterations =   0.075s
+ 10000 iterations =   0.787s
+100000 iterations =   7.880s
+
+Hoedown (C):
+  1000 iterations =   0.022s
+ 10000 iterations =   0.233s
+100000 iterations =   2.262s
 ```
 
 
