@@ -22,6 +22,8 @@ cd hoedown
 make
 cd ..
 
+git clone git@github.com:mity/md4c.git
+
 git clone git@github.com:1Password/markdown-benchmarks.git
 go get -u gopkg.in/russross/blackfriday.v2
 
@@ -36,28 +38,33 @@ Results on 2018 Mac Book Pro (2.9 GHz Intel Core i9)
 $ make run -s
 Blackfriday (Go):
   1000 iterations = 0.054s
- 10000 iterations = 0.517s
-100000 iterations = 5.149s
+ 10000 iterations = 0.514s
+100000 iterations = 5.121s
 
 Comrak (Rust):
-  1000 iterations =   0.258s
- 10000 iterations =   2.560s
-100000 iterations =  25.890s
+  1000 iterations =   0.264s
+ 10000 iterations =   2.542s
+100000 iterations =  26.623s
 
 Pulldown-cmark (Rust):
-  1000 iterations =   0.041s
- 10000 iterations =   0.380s
-100000 iterations =   3.709s
+  1000 iterations =   0.044s
+ 10000 iterations =   0.373s
+100000 iterations =   3.785s
 
 Cmark (C):
-  1000 iterations =   0.075s
- 10000 iterations =   0.787s
-100000 iterations =   7.880s
+  1000 iterations =   0.080s
+ 10000 iterations =   0.798s
+100000 iterations =   7.788s
 
 Hoedown (C):
-  1000 iterations =   0.022s
- 10000 iterations =   0.233s
-100000 iterations =   2.262s
+  1000 iterations =   0.023s
+ 10000 iterations =   0.228s
+100000 iterations =   2.303s
+
+MD4C (C) with empty callbacks:
+  1000 iterations =   0.010s
+ 10000 iterations =   0.112s
+100000 iterations =   1.088s
 ```
 
 
