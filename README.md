@@ -33,7 +33,7 @@ make build
 make run -s
 ```
 
-2020 Auguest results on Intel Core i7 6700 @ 4.0GHz
+2020 August results on Intel Core i7 6700 @ 4.0GHz
 
 ```bash
 $ make run -s
