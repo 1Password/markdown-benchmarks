@@ -3,7 +3,7 @@ build:
 	cd pulldown-cmark && cargo build -q --release
 	cd cmark && gcc -O2 -I../../cmark/src -I../../cmark/build/src  -o cmark main.c ../../cmark/build/src/libcmark.a
 	cd hoedown && gcc -O2 -I../../hoedown/src -o hoedown main.c ../../hoedown/libhoedown.a
-	cd md4c && gcc -O2 -I../../md4c/md4c -o md4c main.c ../../md4c/md4c/md4c.c
+	cd md4c && gcc -O2 -I../../md4c/src -o md4c main.c ../../md4c/src/md4c.c
 
 clean:
 	rm -rf comrak/target/release

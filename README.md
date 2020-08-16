@@ -33,7 +33,42 @@ make build
 make run -s
 ```
 
-Results on 2018 Mac Book Pro (2.9 GHz Intel Core i9)
+2020 August results on Intel Core i7 6700 @ 4.0GHz
+
+```bash
+$ make run -s
+Blackfriday (Go):
+  1000 iterations = 0.081s
+ 10000 iterations = 0.758s
+100000 iterations = 7.419s
+
+Comrak (Rust):
+  1000 iterations =   0.113s
+ 10000 iterations =   1.115s
+100000 iterations =  11.113s
+
+Pulldown-cmark (Rust):
+  1000 iterations =   0.021s
+ 10000 iterations =   0.211s
+100000 iterations =   2.179s
+
+Cmark (C):
+  1000 iterations =   0.046s
+ 10000 iterations =   0.458s
+100000 iterations =   4.653s
+
+Hoedown (C):
+  1000 iterations =   0.022s
+ 10000 iterations =   0.227s
+100000 iterations =   2.238s
+
+MD4C (C) with empty callbacks:
+  1000 iterations =   0.012s
+ 10000 iterations =   0.118s
+100000 iterations =   1.174s
+```
+
+2019 March results on 2018 Mac Book Pro (2.9 GHz Intel Core i9)
 
 ```bash
 $ make run -s
