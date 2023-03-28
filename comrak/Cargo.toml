@@ -5,4 +5,4 @@ authors = ["Roustem Karimov <roustem@agilebits.com>"]
 edition = "2018"
 
 [dependencies]
-comrak = "0.8.2"
+comrak = "0.17.0"
